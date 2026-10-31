@@ -1,38 +1,60 @@
-# SafeFactory 3D — Industrial Digital Twin & Emergency Navigation
+# SafeFactory 3D — Industrial Digital Twin & Emergency Command Center
 
-SafeFactory 3D transforms plant safety with an interactive WebGL 3D Digital Twin, dynamic evacuation pathfinding, real-time IoT sensor telemetry, and workforce muster accountability.
+SafeFactory 3D is a responsive, hardware-accelerated 3D Web Application and Android App designed for industrial emergency management, real-time digital twin monitoring, and workforce evacuation accountability.
 
-Bundled locally for 100% offline-capable execution inside an Android hardware-accelerated WebView.
+Works offline and online across **Laptops / Desktops** (wide-screen responsive layout with WASD controls) and **Android Phones / Tablets** (mobile layout with virtual Touch Bar D-Pad).
 
 ---
 
 ## 🌟 Key Features
 
-### 1. Interactive 3D Digital Twin (Three.js WebGL)
-- **Rotatable 360° Industrial Environment:** Realistic 3D factory floor with robotic welding cells, chemical storage tanks, precision CNC stations, gantry cranes, and structural pillars.
-- **Dynamic 3D Particle FX:** Animated volumetric flame embers, rising smoke plumes, and expanding red hazard shockwaves.
-- **Dynamic 3D Evacuation Vector:** Glowing neon laser escape corridor with animated pulses pointing toward safe exits. Automatically reroutes in real-time around hazard zones.
-- **Worker & User Locators:** Stylized 3D personnel with a golden glowing beacon and holographic HUD locator marking your exact position (`YOU · BAY 04`).
-- **Interactive Raycasting:** Tap any machine or station in 3D to inspect its live temperature, health percentage, vibration, and diagnostics.
-- **Tactical Camera Presets:** Switch between 3D Isometric, 2D Floor Plan, Worker POV, and Hazard Focus angles with smooth interpolation.
+### 1. 🕹️ Dual Control Schemes (Laptop & Android)
+- **Laptop / Desktop Keyboard Controls:**
+  - `W` / `↑` : Walk Forward
+  - `S` / `↓` : Walk Backward
+  - `A` / `←` : Turn Left
+  - `D` / `→` : Turn Right
+  - `Shift` : Sprint / Run
+  - Visual on-screen glowing `[W][A][S][D]` HUD indicator.
+- **Android / Mobile Touch Bar:**
+  - On-screen touch D-pad (`▲`, `◀`, `▼`, `▶`) and `⚡ RUN` toggle button for thumb control on mobile devices.
+  - One-finger drag to rotate camera, two-finger pinch to zoom.
 
-### 2. Cyber-Industrial Glassmorphic UI
-- **Obsidian & Neon Design Language:** Deep space navy `#060b14` palette with electric cyan, emerald green, tactical amber, and scarlet hazard glows.
-- **Interactive Holographic Gyro Core:** 3D animated CSS gyroscopic ring indicating live facility threat level (`SECURE` vs `CRITICAL ALERT`).
-- **Real-Time Telemetry & Metric Tiles:** Live temperature, smoke density, VOC gas detectors, and acoustic decibel sensors.
-- **Full-Screen 3D Mode:** Maximizes the 3D twin for immersive tactical navigation.
+### 2. 📝 Person Reporting & Field Incident Hub
+- **Submit Field Incident Reports:**
+  - Report fire flare-ups, chemical spills, blocked evacuation corridors, or medical emergencies.
+  - `📍 Pin My Location` button captures your avatar's exact 3D coordinates.
+  - Spawns a glowing 3D beacon directly on the factory floor and alerts SCADA.
+- **Coworker Status Tracking:**
+  - Individual roster of on-site workers (*Marco, Elena, Kenji, Sarah, David, Aisha, Maya, Carlos*).
+  - One-click buttons to report colleagues as `Safe`, `Injured`, or `Missing`.
+  - Recalculates muster headcount and dispatches medical alerts.
 
-### 3. Procedural Audio & Tactile Haptics
-- **Web Audio API Synthesizer:** Built-in procedural alert siren sweeps, UI clicks, reroute frequency sweeps, and muster confirmation chimes — zero external audio files required.
-- **Android Tactile Haptics:** Vibration patterns triggered during critical alerts and check-in confirmation.
+### 3. 🌐 Interactive 3D Digital Twin (Three.js WebGL)
+- **3D Factory Floor:** Robotic welding cells with articulating arms, chemical silos with liquid sight-tubes, CNC machining centers, overhead gantry cranes, and safety exit portals.
+- **Dynamic Particle Effects:** 350+ flame particles with rising smoke plume and expanding red hazard shockwaves.
+- **Dynamic AI Evacuation Rerouting:** Automatically detects blocked corridors and reroutes pathways to safe exits (**Exit B**).
+- **Articulated 3D Human Avatars:** Running kinematics with swinging limbs, natural torso bobbing, hardhats, and panic emotion markers.
+
+### 4. 🔊 Procedural Synthesizer & Tactile Haptics
+- **Procedural Web Audio API:** Modulated evacuation sirens, footstep audio synchronization, emergency dispatch radio chirps, and realistic heartbeat monitor (`lub-dub`) — 100% offline with zero external audio assets.
+- **Haptic Vibration:** Tactile vibration sequences for critical alerts and check-in confirmation.
 
 ---
 
-## 📱 Build APK in Android Studio
+## 💻 Running the Web App on Laptop
 
-1. Open `SafeFactory_Android` in **Android Studio** (with Android SDK 35).
-2. Allow Gradle to sync dependencies.
+Run a local server:
+```bash
+python3 -m http.server 8080 --directory app/src/main/assets
+```
+Open **[http://localhost:8080](http://localhost:8080)** in Chrome, Safari, or Edge.
+
+---
+
+## 📱 Building the Android APK
+
+1. Open `SafeFactory_Android` in **Android Studio** (API 35 SDK).
+2. Allow Gradle to sync.
 3. Select **Build > Build Bundle(s) / APK(s) > Build APK(s)**.
-4. Locate the generated APK at:
-   `app/build/outputs/apk/debug/app-debug.apk`
-5. Install on any Android device running Android 7.0+ (API 24+).
+4. Generated APK location: `app/build/outputs/apk/debug/app-debug.apk`.
