@@ -12,22 +12,22 @@
 
   <style>
     :root {
-      --bg-dark: #060b14;
-      --bg-panel: rgba(11, 20, 36, 0.78);
-      --bg-panel-solid: #0d182a;
-      --bg-panel-light: rgba(18, 33, 58, 0.65);
-      --border-cyan: rgba(0, 240, 255, 0.22);
-      --border-glow: rgba(0, 240, 255, 0.45);
+      --bg-dark: #070d18;
+      --bg-panel: rgba(13, 24, 44, 0.88);
+      --bg-panel-solid: #0f1c33;
+      --bg-panel-light: rgba(22, 38, 66, 0.75);
+      --border-cyan: rgba(0, 240, 255, 0.3);
+      --border-glow: rgba(0, 240, 255, 0.55);
       --cyan: #00f0ff;
       --cyan-bright: #38f9d7;
       --emerald: #00ff9d;
       --amber: #ffb703;
       --red: #ff2a55;
       --red-glow: rgba(255, 42, 85, 0.6);
-      --text-main: #e2f1ff;
-      --text-muted: #8eaec9;
-      --text-dim: #5c7895;
-      --glass-shadow: 0 16px 40px rgba(0, 0, 0, 0.55);
+      --text-main: #ffffff;
+      --text-muted: #cbd5e1;
+      --text-dim: #94a3b8;
+      --glass-shadow: 0 16px 40px rgba(0, 0, 0, 0.65);
       --font-mono: ui-monospace, SFMono-Regular, "Roboto Mono", Menlo, Consolas, monospace;
     }
 
@@ -42,9 +42,9 @@
     body {
       background: var(--bg-dark);
       background-image: 
-        radial-gradient(circle at 50% 0%, rgba(0, 240, 255, 0.08) 0%, transparent 60%),
-        radial-gradient(circle at 10% 80%, rgba(0, 255, 157, 0.04) 0%, transparent 40%),
-        linear-gradient(180deg, #060b14 0%, #0a1322 100%);
+        radial-gradient(circle at 50% 0%, rgba(0, 240, 255, 0.12) 0%, transparent 60%),
+        radial-gradient(circle at 10% 80%, rgba(0, 255, 157, 0.06) 0%, transparent 40%),
+        linear-gradient(180deg, #070d18 0%, #0b1424 100%);
       color: var(--text-main);
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       min-height: 100vh;
@@ -92,10 +92,10 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(6, 11, 20, 0.92);
+      background: rgba(7, 13, 24, 0.94);
       backdrop-filter: blur(20px);
       border-bottom: 1px solid var(--border-cyan);
-      padding: 12px 20px;
+      padding: 12px 24px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -108,15 +108,15 @@
     }
 
     .brand-icon {
-      width: 38px;
-      height: 38px;
+      width: 40px;
+      height: 40px;
       border-radius: 10px;
-      background: linear-gradient(135deg, rgba(0,240,255,0.2), rgba(0,255,157,0.1));
+      background: linear-gradient(135deg, rgba(0,240,255,0.25), rgba(0,255,157,0.15));
       border: 1px solid var(--cyan);
       display: grid;
       place-items: center;
-      font-size: 20px;
-      box-shadow: 0 0 15px rgba(0,240,255,0.25);
+      font-size: 22px;
+      box-shadow: 0 0 16px rgba(0,240,255,0.3);
     }
 
     .brand-title {
@@ -124,17 +124,18 @@
       font-weight: 800;
       letter-spacing: 0.5px;
       line-height: 1.1;
+      color: #ffffff;
     }
 
     .brand-title span {
       color: var(--cyan);
-      text-shadow: 0 0 10px rgba(0,240,255,0.4);
+      text-shadow: 0 0 12px rgba(0,240,255,0.5);
     }
 
     .brand-subtitle {
       font-size: 10px;
       font-family: var(--font-mono);
-      color: var(--text-muted);
+      color: #94a3b8;
       letter-spacing: 1.2px;
     }
 
@@ -146,9 +147,9 @@
     }
 
     .desktop-nav-btn {
-      background: rgba(18, 33, 58, 0.6);
-      border: 1px solid transparent;
-      color: var(--text-muted);
+      background: rgba(15, 25, 44, 0.75);
+      border: 1px solid rgba(0, 240, 255, 0.2);
+      color: #cbd5e1;
       padding: 8px 14px;
       border-radius: 10px;
       font-size: 13px;
@@ -161,21 +162,22 @@
     }
 
     .desktop-nav-btn:hover {
-      background: rgba(0, 240, 255, 0.12);
+      background: rgba(0, 240, 255, 0.15);
+      border-color: var(--cyan);
       color: #fff;
     }
 
     .desktop-nav-btn.active {
-      background: rgba(0, 240, 255, 0.2);
+      background: rgba(0, 240, 255, 0.25);
       border-color: var(--cyan);
-      color: var(--cyan-bright);
-      box-shadow: 0 0 12px rgba(0, 240, 255, 0.3);
+      color: #ffffff;
+      box-shadow: 0 0 15px rgba(0, 240, 255, 0.35);
     }
 
     .desktop-nav-btn.danger-nav.active {
-      background: rgba(255, 42, 85, 0.2);
+      background: rgba(255, 42, 85, 0.25);
       border-color: var(--red);
-      color: var(--red);
+      color: #fff;
     }
 
     .header-actions {
@@ -188,39 +190,39 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      padding: 6px 12px;
+      padding: 6px 14px;
       border-radius: 30px;
-      background: rgba(0, 255, 157, 0.12);
-      border: 1px solid rgba(0, 255, 157, 0.35);
+      background: rgba(0, 255, 157, 0.15);
+      border: 1px solid rgba(0, 255, 157, 0.45);
       color: var(--emerald);
       font-size: 11px;
-      font-weight: 700;
+      font-weight: 800;
       letter-spacing: 0.5px;
       font-family: var(--font-mono);
       transition: all 0.3s ease;
     }
 
     .status-badge.danger {
-      background: rgba(255, 42, 85, 0.18);
+      background: rgba(255, 42, 85, 0.25);
       border-color: var(--red);
-      color: var(--red);
-      box-shadow: 0 0 16px rgba(255, 42, 85, 0.4);
+      color: #ffffff;
+      box-shadow: 0 0 18px rgba(255, 42, 85, 0.55);
       animation: pulseAlert 1.2s infinite alternate;
     }
 
     .pulse-dot {
-      width: 7px;
-      height: 7px;
+      width: 8px;
+      height: 8px;
       border-radius: 50%;
       background: currentColor;
       box-shadow: 0 0 8px currentColor;
     }
 
     .icon-btn {
-      width: 36px;
-      height: 36px;
+      width: 38px;
+      height: 38px;
       border-radius: 10px;
-      background: rgba(18, 33, 58, 0.7);
+      background: rgba(18, 33, 58, 0.8);
       border: 1px solid var(--border-cyan);
       color: var(--cyan);
       display: grid;
@@ -231,7 +233,7 @@
     }
     .icon-btn:active {
       transform: scale(0.92);
-      background: rgba(0, 240, 255, 0.2);
+      background: rgba(0, 240, 255, 0.25);
     }
 
     /* Main Container & Responsive Layout */
@@ -248,7 +250,7 @@
         display: grid;
         grid-template-columns: 58% 42%;
         gap: 24px;
-        padding: 20px 28px;
+        padding: 24px 32px;
         align-items: start;
       }
 
@@ -266,8 +268,8 @@
 
       .twin-card {
         position: sticky;
-        top: 80px;
-        height: calc(100vh - 110px);
+        top: 86px;
+        height: calc(100vh - 120px);
         margin-bottom: 0 !important;
       }
 
@@ -279,11 +281,11 @@
     /* 3D Viewport Component */
     .twin-card {
       position: relative;
-      background: #040811;
+      background: #091322;
       border: 1px solid var(--border-glow);
       border-radius: 20px;
       overflow: hidden;
-      box-shadow: var(--glass-shadow), 0 0 30px rgba(0, 240, 255, 0.15);
+      box-shadow: var(--glass-shadow), 0 0 35px rgba(0, 240, 255, 0.15);
       margin-bottom: 20px;
       transition: all 0.4s ease;
     }
@@ -299,7 +301,7 @@
 
     .canvas-container {
       width: 100%;
-      height: 350px;
+      height: 380px;
       position: relative;
       touch-action: none;
       cursor: grab;
@@ -312,25 +314,27 @@
       cursor: grabbing;
     }
 
-    /* 3D HUD Overlay */
+    /* 3D HUD Top Bar */
     .hud-overlay {
       position: absolute;
-      top: 12px;
-      left: 12px;
-      right: 12px;
+      top: 14px;
+      left: 14px;
+      right: 14px;
       display: flex;
       justify-content: space-between;
-      align-items: flex-start;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
       pointer-events: none;
       z-index: 10;
     }
 
     .hud-tag {
-      background: rgba(6, 11, 20, 0.88);
-      backdrop-filter: blur(10px);
+      background: rgba(7, 13, 24, 0.92);
+      backdrop-filter: blur(12px);
       border: 1px solid var(--border-cyan);
-      border-radius: 8px;
-      padding: 6px 10px;
+      border-radius: 9px;
+      padding: 6px 12px;
       font-size: 10px;
       font-family: var(--font-mono);
       color: var(--cyan);
@@ -341,45 +345,51 @@
     }
 
     .hud-tag b {
-      color: #fff;
+      color: #ffffff;
       font-size: 11px;
     }
 
+    /* Horizontal Camera Controls Toolbar (Cleanly spaced at top-right) */
     .cam-controls {
       display: flex;
-      flex-direction: column;
-      gap: 5px;
+      flex-direction: row;
+      gap: 6px;
       pointer-events: auto;
     }
 
     .cam-btn {
-      background: rgba(11, 20, 36, 0.88);
-      backdrop-filter: blur(10px);
+      background: rgba(13, 24, 44, 0.9);
+      backdrop-filter: blur(12px);
       border: 1px solid var(--border-cyan);
-      color: var(--text-main);
-      padding: 5px 9px;
-      border-radius: 7px;
+      color: #cbd5e1;
+      padding: 6px 10px;
+      border-radius: 8px;
       font-size: 11px;
-      font-weight: 600;
+      font-weight: 700;
       cursor: pointer;
       display: flex;
       align-items: center;
       gap: 5px;
       transition: all 0.2s;
     }
-    .cam-btn:active, .cam-btn.active {
-      background: rgba(0, 240, 255, 0.25);
+    .cam-btn:hover {
+      background: rgba(0, 240, 255, 0.2);
       border-color: var(--cyan);
       color: #fff;
-      box-shadow: 0 0 10px rgba(0, 240, 255, 0.4);
+    }
+    .cam-btn:active, .cam-btn.active {
+      background: rgba(0, 240, 255, 0.3);
+      border-color: var(--cyan);
+      color: #fff;
+      box-shadow: 0 0 12px rgba(0, 240, 255, 0.45);
     }
 
-    /* WASD Keyboard Indicator HUD (Laptop / Desktop) */
+    /* WASD Keyboard Indicator HUD (Compact & placed at bottom-right) */
     .wasd-hud {
       position: absolute;
-      top: 75px;
-      right: 12px;
-      background: rgba(6, 11, 20, 0.85);
+      bottom: 50px;
+      right: 14px;
+      background: rgba(7, 13, 24, 0.88);
       backdrop-filter: blur(12px);
       border: 1px solid var(--border-cyan);
       border-radius: 12px;
@@ -390,6 +400,7 @@
       flex-direction: column;
       align-items: center;
       gap: 4px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
     }
 
     .wasd-row {
@@ -401,8 +412,8 @@
       width: 26px;
       height: 26px;
       border-radius: 6px;
-      background: rgba(18, 33, 58, 0.7);
-      border: 1px solid rgba(0, 240, 255, 0.3);
+      background: rgba(22, 38, 66, 0.8);
+      border: 1px solid rgba(0, 240, 255, 0.35);
       color: #fff;
       font-size: 11px;
       font-weight: 800;
@@ -415,33 +426,41 @@
     .key-cap.pressed {
       background: var(--cyan);
       color: #000;
-      box-shadow: 0 0 12px var(--cyan);
+      box-shadow: 0 0 14px var(--cyan);
       transform: translateY(2px);
     }
 
     .key-cap.shift-cap {
-      width: 56px;
+      width: 58px;
       font-size: 9px;
     }
 
-    /* Android Touch Bar & On-Screen Virtual D-Pad */
+    /* Android Touch Bar (Hidden by default on desktop, visible on mobile) */
     .touch-bar-panel {
       position: absolute;
-      bottom: 60px;
-      left: 12px;
-      background: rgba(6, 11, 20, 0.88);
+      bottom: 50px;
+      left: 14px;
+      background: rgba(7, 13, 24, 0.92);
       backdrop-filter: blur(16px);
       border: 1px solid var(--border-cyan);
       border-radius: 16px;
       padding: 8px;
       pointer-events: auto;
       z-index: 25;
-      display: flex;
+      display: none; /* Desktop default: hidden */
       flex-direction: column;
       align-items: center;
       gap: 4px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.6);
-      transition: opacity 0.3s ease;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.65);
+    }
+
+    @media (max-width: 991px) {
+      .touch-bar-panel {
+        display: flex; /* Mobile default: visible */
+      }
+      .wasd-hud {
+        display: none; /* Hide keyboard box on mobile */
+      }
     }
 
     .dpad-row {
@@ -453,7 +472,7 @@
       width: 44px;
       height: 44px;
       border-radius: 12px;
-      background: rgba(18, 33, 58, 0.85);
+      background: rgba(22, 38, 66, 0.9);
       border: 1px solid var(--border-cyan);
       color: var(--cyan);
       font-size: 18px;
@@ -466,7 +485,7 @@
     }
 
     .touch-dpad-btn:active, .touch-dpad-btn.active {
-      background: rgba(0, 240, 255, 0.4);
+      background: rgba(0, 240, 255, 0.45);
       color: #fff;
       box-shadow: 0 0 15px var(--cyan);
       transform: scale(0.92);
@@ -479,13 +498,13 @@
     }
 
     .touch-action-pill {
-      background: rgba(0, 255, 157, 0.15);
+      background: rgba(0, 255, 157, 0.2);
       border: 1px solid var(--emerald);
       color: var(--emerald);
-      padding: 4px 8px;
+      padding: 5px 9px;
       border-radius: 8px;
       font-size: 10px;
-      font-weight: 700;
+      font-weight: 800;
       font-family: var(--font-mono);
       cursor: pointer;
     }
@@ -498,20 +517,20 @@
     /* Live 3D Walk HUD Overlay Panel */
     .walk-hud-box {
       position: absolute;
-      top: 60px;
-      left: 12px;
-      background: rgba(6, 11, 20, 0.9);
+      top: 66px;
+      left: 14px;
+      background: rgba(7, 13, 24, 0.92);
       backdrop-filter: blur(15px);
       border: 1px solid var(--emerald);
       border-radius: 12px;
-      padding: 8px 12px;
+      padding: 8px 14px;
       font-size: 11px;
       font-family: var(--font-mono);
       color: #fff;
       display: none;
       pointer-events: auto;
       z-index: 20;
-      box-shadow: 0 0 15px rgba(0, 255, 157, 0.25);
+      box-shadow: 0 0 18px rgba(0, 255, 157, 0.3);
     }
     .walk-hud-box.visible {
       display: block;
@@ -520,8 +539,8 @@
     .hud-bottom-bar {
       position: absolute;
       bottom: 12px;
-      left: 12px;
-      right: 12px;
+      left: 14px;
+      right: 14px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -531,14 +550,14 @@
 
     .hud-legend {
       display: flex;
-      gap: 8px;
-      background: rgba(6, 11, 20, 0.88);
+      gap: 10px;
+      background: rgba(7, 13, 24, 0.88);
       backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      padding: 6px 10px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 6px 12px;
       border-radius: 8px;
-      font-size: 10px;
-      color: var(--text-muted);
+      font-size: 11px;
+      color: #cbd5e1;
       pointer-events: auto;
     }
     .hud-legend-item {
@@ -553,12 +572,13 @@
     }
 
     .hud-interactive-hint {
-      background: rgba(0, 240, 255, 0.15);
+      background: rgba(0, 240, 255, 0.2);
       border: 1px solid var(--cyan);
-      color: var(--cyan-bright);
-      padding: 5px 10px;
+      color: #ffffff;
+      padding: 6px 12px;
       border-radius: 20px;
       font-size: 10px;
+      font-weight: 700;
       font-family: var(--font-mono);
       animation: floatHint 2.5s ease-in-out infinite;
       pointer-events: auto;
@@ -575,8 +595,8 @@
       backdrop-filter: blur(16px);
       border: 1px solid var(--border-cyan);
       border-radius: 18px;
-      padding: 18px;
-      margin-bottom: 16px;
+      padding: 20px;
+      margin-bottom: 18px;
       box-shadow: var(--glass-shadow);
       position: relative;
       overflow: hidden;
@@ -586,41 +606,41 @@
       content: "";
       position: absolute;
       top: 0; left: 0; right: 0; height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(0, 240, 255, 0.5), transparent);
+      background: linear-gradient(90deg, transparent, rgba(0, 240, 255, 0.6), transparent);
     }
 
     .glass-card.emergency-alert-card {
-      background: linear-gradient(135deg, rgba(45, 10, 20, 0.88), rgba(20, 5, 12, 0.95));
+      background: linear-gradient(135deg, rgba(50, 10, 22, 0.92), rgba(24, 5, 14, 0.98));
       border-color: var(--red);
-      box-shadow: 0 0 35px rgba(255, 42, 85, 0.35);
+      box-shadow: 0 0 35px rgba(255, 42, 85, 0.45);
       animation: pulseBorder 1.5s infinite alternate;
     }
 
     @keyframes pulseBorder {
       0% { border-color: rgba(255, 42, 85, 0.5); box-shadow: 0 0 20px rgba(255, 42, 85, 0.2); }
-      100% { border-color: rgba(255, 42, 85, 1); box-shadow: 0 0 40px rgba(255, 42, 85, 0.5); }
+      100% { border-color: rgba(255, 42, 85, 1); box-shadow: 0 0 45px rgba(255, 42, 85, 0.6); }
     }
 
     /* Real-Time Panic & Biometric Row */
     .panic-telemetry-row {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 10px;
-      margin: 12px 0;
+      gap: 12px;
+      margin: 14px 0;
     }
 
     .panic-heart-box, .panic-status-box {
-      background: rgba(8, 16, 28, 0.7);
-      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(10, 18, 32, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.12);
       border-radius: 12px;
-      padding: 10px 12px;
+      padding: 12px 14px;
       display: flex;
       align-items: center;
       gap: 10px;
     }
 
     .heart-pulse-icon {
-      font-size: 20px;
+      font-size: 22px;
       color: var(--emerald);
       animation: beatNormal 1s infinite;
     }
@@ -642,15 +662,17 @@
 
     /* Typography & Section Titles */
     .eyebrow {
-      font-size: 10px;
+      font-size: 11px;
       font-family: var(--font-mono);
-      letter-spacing: 2px;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
-      color: var(--cyan);
+      color: #00f0ff;
+      font-weight: 700;
       display: flex;
       align-items: center;
       gap: 6px;
       margin-bottom: 6px;
+      text-shadow: 0 0 10px rgba(0, 240, 255, 0.4);
     }
 
     .eyebrow::before {
@@ -662,16 +684,17 @@
     }
 
     .section-title {
-      font-size: 22px;
+      font-size: 20px;
       font-weight: 800;
-      letter-spacing: -0.5px;
+      color: #ffffff;
+      letter-spacing: -0.3px;
       margin-bottom: 6px;
     }
 
     .section-desc {
       font-size: 13px;
-      color: var(--text-muted);
-      line-height: 1.5;
+      color: #cbd5e1;
+      line-height: 1.55;
       margin-bottom: 14px;
     }
 
@@ -699,7 +722,7 @@
     }
 
     .gyro-ring:nth-child(2) {
-      border: 2px solid rgba(0, 255, 157, 0.6);
+      border: 2px solid rgba(0, 255, 157, 0.7);
       transform: rotateX(60deg);
       animation: spinGyro2 4s linear infinite;
     }
@@ -719,12 +742,15 @@
       display: grid;
       place-items: center;
       font-size: 14px;
+      font-weight: 800;
+      color: #000;
       transition: all 0.3s;
     }
 
     body.danger .gyro-core {
       background: radial-gradient(circle, var(--red) 20%, transparent 80%);
       box-shadow: 0 0 25px var(--red);
+      color: #fff;
     }
     body.danger .gyro-ring {
       border-color: var(--red);
@@ -747,21 +773,22 @@
       flex: 1;
     }
     .core-label {
-      font-size: 11px;
+      font-size: 10px;
       font-family: var(--font-mono);
-      color: var(--text-muted);
+      color: #94a3b8;
       letter-spacing: 1px;
     }
     .core-heading {
       font-size: 18px;
       font-weight: 800;
-      color: #fff;
+      color: #ffffff;
       margin: 2px 0 4px;
     }
     .core-desc {
       font-size: 12px;
       color: var(--emerald);
       font-family: var(--font-mono);
+      font-weight: 600;
     }
     body.danger .core-desc {
       color: var(--red);
@@ -771,13 +798,13 @@
     .metric-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
+      gap: 12px;
       margin: 16px 0;
     }
 
     .metric-tile {
-      background: rgba(10, 20, 36, 0.7);
-      border: 1px solid rgba(0, 240, 255, 0.15);
+      background: rgba(15, 25, 44, 0.85);
+      border: 1px solid rgba(0, 240, 255, 0.25);
       border-radius: 14px;
       padding: 14px 10px;
       text-align: center;
@@ -791,17 +818,18 @@
     }
 
     .metric-value {
-      font-size: 24px;
+      font-size: 26px;
       font-weight: 800;
       font-family: var(--font-mono);
-      color: #fff;
+      color: #ffffff;
       letter-spacing: -0.5px;
       display: block;
     }
 
     .metric-label {
-      font-size: 10px;
-      color: var(--text-muted);
+      font-size: 11px;
+      color: #94a3b8;
+      font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.8px;
       margin-top: 4px;
@@ -809,7 +837,7 @@
     }
 
     .metric-bar {
-      height: 3px;
+      height: 4px;
       background: rgba(255,255,255,0.1);
       border-radius: 2px;
       margin-top: 8px;
@@ -826,32 +854,34 @@
     .telemetry-row {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 8px;
+      gap: 10px;
       margin-top: 12px;
     }
 
     .telemetry-box {
-      background: rgba(7, 14, 25, 0.6);
-      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(15, 25, 44, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.12);
       border-radius: 12px;
       padding: 10px 8px;
       text-align: center;
     }
     .telemetry-icon {
-      font-size: 16px;
+      font-size: 18px;
       margin-bottom: 4px;
     }
     .telemetry-val {
-      font-size: 14px;
-      font-weight: 700;
+      font-size: 15px;
+      font-weight: 800;
       font-family: var(--font-mono);
-      color: #fff;
+      color: #ffffff;
     }
     .telemetry-sub {
-      font-size: 9px;
-      color: var(--text-dim);
+      font-size: 10px;
+      color: #94a3b8;
+      font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.5px;
+      margin-top: 3px;
     }
 
     /* Buttons */
@@ -865,7 +895,7 @@
       justify-content: center;
       gap: 8px;
       font-weight: 700;
-      border-radius: 14px;
+      border-radius: 12px;
       transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     }
     .btn:active {
@@ -874,13 +904,16 @@
 
     .btn-emergency {
       width: 100%;
-      padding: 16px;
-      font-size: 15px;
-      letter-spacing: 0.5px;
-      background: linear-gradient(135deg, #ff2a55 0%, #b80d32 100%);
-      color: #fff;
-      box-shadow: 0 8px 25px rgba(255, 42, 85, 0.45);
-      border: 1px solid rgba(255, 255, 255, 0.3);
+      padding: 15px 20px;
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 0.8px;
+      background: linear-gradient(135deg, #ff1744 0%, #c51162 100%);
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      border-radius: 12px;
+      box-shadow: 0 6px 22px rgba(255, 23, 68, 0.45);
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
       position: relative;
       overflow: hidden;
     }
@@ -888,7 +921,7 @@
       content: "";
       position: absolute;
       top: -50%; left: -50%; width: 200%; height: 200%;
-      background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+      background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.2), transparent);
       transform: rotate(45deg);
       animation: btnShine 3s infinite;
     }
@@ -899,32 +932,37 @@
 
     .btn-safe {
       width: 100%;
-      padding: 16px;
+      padding: 15px;
       font-size: 15px;
       background: linear-gradient(135deg, #00d27a 0%, #009650 100%);
-      color: #fff;
+      color: #ffffff;
       box-shadow: 0 8px 25px rgba(0, 210, 122, 0.4);
       border: 1px solid rgba(255, 255, 255, 0.3);
     }
 
     .btn-secondary {
-      background: rgba(18, 33, 58, 0.8);
-      border: 1px solid var(--border-cyan);
+      background: rgba(22, 38, 66, 0.85);
+      border: 1px solid rgba(0, 240, 255, 0.35);
       color: var(--cyan);
-      padding: 13px;
+      padding: 12px 14px;
       font-size: 13px;
+      font-weight: 700;
       flex: 1;
     }
     .btn-secondary:hover {
-      background: rgba(0, 240, 255, 0.15);
+      background: rgba(0, 240, 255, 0.2);
       border-color: var(--cyan);
+      color: #fff;
     }
 
     .btn-walk {
-      background: linear-gradient(135deg, #00b4d8 0%, #0077b6 100%);
-      color: #fff;
-      box-shadow: 0 4px 18px rgba(0, 180, 216, 0.4);
-      border: 1px solid rgba(255, 255, 255, 0.3);
+      background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+      color: #ffffff;
+      border: 1px solid rgba(56, 189, 248, 0.4);
+      box-shadow: 0 4px 18px rgba(2, 132, 199, 0.4);
+      padding: 12px 14px;
+      font-size: 13px;
+      font-weight: 700;
     }
 
     .btn-group {
@@ -958,7 +996,7 @@
       gap: 12px;
     }
     body.danger .guidance-banner {
-      background: linear-gradient(90deg, rgba(255, 42, 85, 0.2), rgba(255, 183, 3, 0.05));
+      background: linear-gradient(90deg, rgba(255, 42, 85, 0.25), rgba(255, 183, 3, 0.05));
       border-color: var(--red);
     }
     .guidance-icon {
@@ -973,7 +1011,7 @@
       flex-shrink: 0;
     }
     body.danger .guidance-icon {
-      background: rgba(255, 42, 85, 0.2);
+      background: rgba(255, 42, 85, 0.25);
       border-color: var(--red);
     }
 
@@ -988,26 +1026,26 @@
       display: flex;
       align-items: flex-start;
       gap: 12px;
-      background: rgba(10, 20, 36, 0.6);
-      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(15, 25, 44, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.1);
       border-radius: 12px;
       padding: 12px 14px;
     }
     .route-step-card.active {
       border-color: var(--emerald);
-      background: rgba(0, 255, 157, 0.08);
+      background: rgba(0, 255, 157, 0.1);
     }
     .route-step-card.blocked {
       border-color: var(--red);
-      background: rgba(255, 42, 85, 0.1);
-      opacity: 0.7;
+      background: rgba(255, 42, 85, 0.15);
+      opacity: 0.8;
     }
 
     .step-num {
       width: 26px;
       height: 26px;
       border-radius: 50%;
-      background: rgba(0, 240, 255, 0.2);
+      background: rgba(0, 240, 255, 0.25);
       border: 1px solid var(--cyan);
       display: grid;
       place-items: center;
@@ -1039,7 +1077,7 @@
     }
 
     .muster-bg {
-      stroke: rgba(255, 255, 255, 0.08);
+      stroke: rgba(255, 255, 255, 0.1);
     }
 
     .muster-progress {
@@ -1062,7 +1100,7 @@
     }
     .muster-center-info small {
       font-size: 11px;
-      color: var(--text-muted);
+      color: #cbd5e1;
       letter-spacing: 1px;
     }
 
@@ -1075,15 +1113,16 @@
       display: block;
       font-size: 11px;
       font-family: var(--font-mono);
-      color: var(--text-muted);
+      color: #cbd5e1;
       margin-bottom: 6px;
       letter-spacing: 0.8px;
       text-transform: uppercase;
+      font-weight: 700;
     }
 
     .cyber-input, .cyber-textarea {
       width: 100%;
-      background: #0b1728;
+      background: #0f1c33;
       border: 1px solid var(--border-cyan);
       border-radius: 10px;
       padding: 10px 14px;
@@ -1096,7 +1135,7 @@
 
     .cyber-input:focus, .cyber-textarea:focus {
       border-color: var(--cyan);
-      box-shadow: 0 0 10px rgba(0, 240, 255, 0.3);
+      box-shadow: 0 0 10px rgba(0, 240, 255, 0.35);
     }
 
     .cyber-textarea {
@@ -1112,12 +1151,13 @@
     }
 
     .incident-chip {
-      background: rgba(18, 33, 58, 0.6);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(22, 38, 66, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.12);
       border-radius: 10px;
       padding: 10px;
       font-size: 12px;
-      color: var(--text-main);
+      font-weight: 600;
+      color: #ffffff;
       cursor: pointer;
       display: flex;
       align-items: center;
@@ -1126,18 +1166,18 @@
     }
 
     .incident-chip.active {
-      background: rgba(0, 240, 255, 0.2);
+      background: rgba(0, 240, 255, 0.25);
       border-color: var(--cyan);
       color: #fff;
-      box-shadow: 0 0 12px rgba(0, 240, 255, 0.3);
+      box-shadow: 0 0 12px rgba(0, 240, 255, 0.35);
     }
 
     /* Personnel Action Rows in Reporting */
     .person-card {
-      background: rgba(8, 16, 28, 0.7);
-      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(15, 25, 44, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.1);
       border-radius: 12px;
-      padding: 12px;
+      padding: 12px 14px;
       margin-bottom: 10px;
       display: flex;
       justify-content: space-between;
@@ -1153,7 +1193,7 @@
     .mini-btn {
       padding: 6px 10px;
       border-radius: 8px;
-      font-size: 10px;
+      font-size: 11px;
       font-weight: 700;
       font-family: var(--font-mono);
       cursor: pointer;
@@ -1162,19 +1202,19 @@
     }
 
     .btn-flag-safe {
-      background: rgba(0, 255, 157, 0.15);
+      background: rgba(0, 255, 157, 0.18);
       border: 1px solid var(--emerald);
       color: var(--emerald);
     }
 
     .btn-flag-injured {
-      background: rgba(255, 42, 85, 0.15);
+      background: rgba(255, 42, 85, 0.2);
       border: 1px solid var(--red);
-      color: var(--red);
+      color: #ffffff;
     }
 
     .btn-flag-missing {
-      background: rgba(255, 183, 3, 0.15);
+      background: rgba(255, 183, 3, 0.2);
       border: 1px solid var(--amber);
       color: var(--amber);
     }
@@ -1189,19 +1229,21 @@
     }
 
     .feed-item {
-      background: rgba(8, 16, 28, 0.7);
-      border: 1px solid rgba(255, 255, 255, 0.06);
+      background: rgba(15, 25, 44, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.08);
       border-left: 3px solid var(--cyan);
       border-radius: 8px;
       padding: 10px 12px;
       font-size: 12px;
+      color: #cbd5e1;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
     .feed-item.critical {
       border-left-color: var(--red);
-      background: rgba(255, 42, 85, 0.08);
+      background: rgba(255, 42, 85, 0.12);
+      color: #ffffff;
     }
     .feed-item.success {
       border-left-color: var(--emerald);
@@ -1213,56 +1255,71 @@
       justify-content: space-between;
       align-items: center;
       padding: 10px 0;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
       font-size: 13px;
+      color: #cbd5e1;
     }
     .roster-tag {
       font-size: 11px;
-      padding: 3px 8px;
+      padding: 4px 10px;
       border-radius: 20px;
       font-family: var(--font-mono);
+      font-weight: 700;
     }
     .tag-safe {
-      background: rgba(0, 255, 157, 0.15);
+      background: rgba(0, 255, 157, 0.18);
       color: var(--emerald);
-      border: 1px solid rgba(0, 255, 157, 0.3);
+      border: 1px solid rgba(0, 255, 157, 0.35);
     }
     .tag-evac {
-      background: rgba(255, 183, 3, 0.15);
+      background: rgba(255, 183, 3, 0.18);
       color: var(--amber);
-      border: 1px solid rgba(255, 183, 3, 0.3);
+      border: 1px solid rgba(255, 183, 3, 0.35);
     }
 
-    /* Interactive Object Telemetry Modal */
+    /* Interactive Object Telemetry Modal (Cleanly Hidden when closed) */
     .telemetry-modal {
       position: fixed;
-      bottom: 90px;
-      left: 16px;
-      right: 16px;
-      max-width: 500px;
-      margin: 0 auto;
-      background: rgba(9, 18, 33, 0.95);
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(160%);
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      width: min(520px, 92%);
+      background: rgba(13, 24, 44, 0.96);
       backdrop-filter: blur(25px);
       border: 1px solid var(--cyan);
-      box-shadow: 0 0 35px rgba(0, 240, 255, 0.3);
+      box-shadow: 0 0 35px rgba(0, 240, 255, 0.4);
       border-radius: 18px;
-      padding: 16px;
+      padding: 18px;
       z-index: 600;
-      transform: translateY(120%);
-      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease, visibility 0.3s;
     }
     .telemetry-modal.open {
-      transform: translateY(0);
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
     }
     .modal-close {
       position: absolute;
-      top: 12px;
-      right: 12px;
-      background: none;
-      border: none;
-      color: var(--text-muted);
-      font-size: 18px;
+      top: 14px;
+      right: 14px;
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #fff;
+      font-size: 15px;
+      display: grid;
+      place-items: center;
       cursor: pointer;
+    }
+    .modal-close:hover {
+      background: rgba(255, 42, 85, 0.3);
+      border-color: var(--red);
     }
 
     /* Bottom Navigation Bar */
@@ -1272,7 +1329,7 @@
       left: 50%;
       transform: translateX(-50%);
       width: min(600px, 100%);
-      background: rgba(6, 11, 20, 0.94);
+      background: rgba(7, 13, 24, 0.95);
       backdrop-filter: blur(20px);
       border-top: 1px solid var(--border-cyan);
       display: flex;
@@ -1284,9 +1341,9 @@
     .nav-item {
       background: none;
       border: none;
-      color: var(--text-dim);
+      color: #94a3b8;
       font-size: 10px;
-      font-weight: 600;
+      font-weight: 700;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -1304,16 +1361,16 @@
 
     .nav-item.active {
       color: var(--cyan-bright);
-      background: rgba(0, 240, 255, 0.08);
-      box-shadow: 0 0 15px rgba(0, 240, 255, 0.15);
+      background: rgba(0, 240, 255, 0.12);
+      box-shadow: 0 0 15px rgba(0, 240, 255, 0.2);
     }
 
     .nav-item.danger-tab {
       color: var(--red);
     }
     .nav-item.danger-tab.active {
-      background: rgba(255, 42, 85, 0.12);
-      box-shadow: 0 0 15px rgba(255, 42, 85, 0.2);
+      background: rgba(255, 42, 85, 0.18);
+      box-shadow: 0 0 15px rgba(255, 42, 85, 0.3);
     }
 
     /* Settings Switch & Dropdown */
@@ -1322,7 +1379,8 @@
       justify-content: space-between;
       align-items: center;
       padding: 12px 0;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      color: #cbd5e1;
     }
 
     .switch-toggle {
@@ -1340,7 +1398,7 @@
       position: absolute;
       cursor: pointer;
       top: 0; left: 0; right: 0; bottom: 0;
-      background-color: rgba(255, 255, 255, 0.15);
+      background-color: rgba(255, 255, 255, 0.2);
       border-radius: 34px;
       transition: .3s;
     }
@@ -1364,7 +1422,7 @@
     }
 
     select.cyber-select {
-      background: #0d1a2d;
+      background: #0f1c33;
       color: #fff;
       border: 1px solid var(--border-cyan);
       border-radius: 8px;
@@ -1432,7 +1490,7 @@
     <div class="twin-card" id="twinCard">
       <div class="canvas-container" id="canvasContainer"></div>
 
-      <!-- 3D Viewport HUD Controls -->
+      <!-- 3D Viewport HUD Top Controls -->
       <div class="hud-overlay">
         <div class="hud-tag">
           <small>DIGITAL TWIN STATUS</small>
@@ -1443,13 +1501,13 @@
           <button class="cam-btn" id="btnCamTop" onclick="setCameraView('top')">🗺️ 2D Plan</button>
           <button class="cam-btn" id="btnCamWorker" onclick="setCameraView('worker')">🚶 You</button>
           <button class="cam-btn" id="btnCamHazard" onclick="setCameraView('hazard')">🚨 Hazard</button>
-          <button class="cam-btn" id="btnFollowCam" onclick="toggleFollowCam()">🎥 Chase Cam</button>
+          <button class="cam-btn" id="btnFollowCam" onclick="toggleFollowCam()">🎥 Chase</button>
         </div>
       </div>
 
-      <!-- WASD Keyboard Visual Indicator (Laptop / Desktop) -->
+      <!-- WASD Keyboard Visual Indicator (Compact & placed at bottom-right) -->
       <div class="wasd-hud" id="wasdKeyHud" title="Use WASD or Arrow Keys to Walk">
-        <div style="font-size:9px;color:var(--text-muted);letter-spacing:1px;font-family:var(--font-mono);">KEYBOARD WALK</div>
+        <div style="font-size:9px;color:#94a3b8;letter-spacing:1px;font-family:var(--font-mono);font-weight:700;">WASD WALK</div>
         <div class="wasd-row">
           <div class="key-cap" id="keyW">W</div>
         </div>
@@ -1560,7 +1618,7 @@
         <!-- Live Environmental Telemetry -->
         <div class="glass-card">
           <div class="eyebrow">LIVE TELEMETRY STREAM</div>
-          <h3 style="font-size:15px;margin-bottom:8px;">Atmospheric & Machine Sensors</h3>
+          <h3 style="font-size:16px;margin-bottom:10px;color:#ffffff;">Atmospheric & Machine Sensors</h3>
           <div class="telemetry-row">
             <div class="telemetry-box">
               <div class="telemetry-icon">🌡️</div>
@@ -1613,13 +1671,13 @@
             <div class="panic-heart-box">
               <div class="heart-pulse-icon" id="heartIcon">❤️</div>
               <div>
-                <div style="font-size:10px; color:var(--text-muted);">BIOMETRIC PULSE</div>
+                <div style="font-size:10px; color:#94a3b8; font-weight:700;">BIOMETRIC PULSE</div>
                 <div style="font-size:16px; font-weight:800; font-family:var(--font-mono);" id="bpmCounter">74 BPM</div>
               </div>
             </div>
             <div class="panic-status-box">
               <div>
-                <div style="font-size:10px; color:var(--text-muted);">WORKFORCE REACTION</div>
+                <div style="font-size:10px; color:#94a3b8; font-weight:700;">WORKFORCE REACTION</div>
                 <div style="font-size:12px; font-weight:700; color:var(--emerald);" id="panicMood">NORMAL OPERATION</div>
               </div>
             </div>
@@ -1639,9 +1697,9 @@
         <div class="guidance-banner" id="routeBanner">
           <div class="guidance-icon" id="routeBannerIcon">🚪</div>
           <div>
-            <div style="font-size:11px;font-family:var(--font-mono);color:var(--cyan);letter-spacing:1px;" id="routeTargetCode">OPTIMAL PRIMARY VECTOR</div>
-            <div style="font-size:16px;font-weight:800;" id="routeTargetTitle">Exit A · North Gate</div>
-            <div style="font-size:12px;color:var(--text-muted);" id="routeDistanceText">85 meters · Est. 52 sec · Corridor unobstructed</div>
+            <div style="font-size:11px;font-family:var(--font-mono);color:var(--cyan);letter-spacing:1px;font-weight:700;" id="routeTargetCode">OPTIMAL PRIMARY VECTOR</div>
+            <div style="font-size:16px;font-weight:800;color:#fff;" id="routeTargetTitle">Exit A · North Gate</div>
+            <div style="font-size:12px;color:#cbd5e1;" id="routeDistanceText">85 meters · Est. 52 sec · Corridor unobstructed</div>
           </div>
         </div>
 
@@ -1649,24 +1707,24 @@
           <div class="route-step-card active" id="step1">
             <div class="step-num">1</div>
             <div>
-              <div style="font-weight:700;font-size:13px;">Depart Bay 4 Workstation</div>
-              <div style="font-size:12px;color:var(--text-muted);">Use WASD or Touch Bar to step onto the illuminated floor corridor.</div>
+              <div style="font-weight:700;font-size:13px;color:#fff;">Depart Bay 4 Workstation</div>
+              <div style="font-size:12px;color:#cbd5e1;">Use WASD or Touch Bar to step onto the illuminated floor corridor.</div>
             </div>
           </div>
 
           <div class="route-step-card" id="step2">
             <div class="step-num">2</div>
             <div>
-              <div style="font-weight:700;font-size:13px;" id="step2Title">Proceed through Main Central Corridor</div>
-              <div style="font-size:12px;color:var(--text-muted);" id="step2Desc">Clear visibility and normal atmospheric metrics reported.</div>
+              <div style="font-weight:700;font-size:13px;color:#fff;" id="step2Title">Proceed through Main Central Corridor</div>
+              <div style="font-size:12px;color:#cbd5e1;" id="step2Desc">Clear visibility and normal atmospheric metrics reported.</div>
             </div>
           </div>
 
           <div class="route-step-card" id="step3">
             <div class="step-num">3</div>
             <div>
-              <div style="font-weight:700;font-size:13px;" id="step3Title">Pass Fire Doors to Assembly Point</div>
-              <div style="font-size:12px;color:var(--text-muted);" id="step3Desc">Muster Area Alpha · External Courtyard.</div>
+              <div style="font-weight:700;font-size:13px;color:#fff;" id="step3Title">Pass Fire Doors to Assembly Point</div>
+              <div style="font-size:12px;color:#cbd5e1;" id="step3Desc">Muster Area Alpha · External Courtyard.</div>
             </div>
           </div>
         </div>
@@ -1686,7 +1744,7 @@
             <div style="font-size:32px;">🛡️</div>
             <div>
               <div style="font-size:16px;font-weight:800;color:var(--emerald);">Normal Industrial Operations</div>
-              <div style="font-size:12px;color:var(--text-muted);">All 5 production zones operating within certified safety parameters.</div>
+              <div style="font-size:12px;color:#cbd5e1;">All 5 production zones operating within certified safety parameters.</div>
             </div>
           </div>
         </div>
@@ -1757,7 +1815,7 @@
           <button class="btn btn-safe" onclick="markSafe()" id="btnBiometricCheckin">
             <span>👆</span> BIOMETRIC MUSTER CHECK-IN
           </button>
-          <p id="checkinStatusText" style="text-align:center;font-size:12px;margin-top:10px;color:var(--emerald);"></p>
+          <p id="checkinStatusText" style="text-align:center;font-size:12px;margin-top:10px;color:var(--emerald);font-weight:700;"></p>
         </div>
 
         <!-- Department Roster -->
@@ -1765,29 +1823,29 @@
           <div class="eyebrow">DEPARTMENT ROSTER BREAKDOWN</div>
           <div class="roster-row">
             <div>
-              <b>Robotic Assembly & Cells</b>
-              <div style="font-size:11px;color:var(--text-muted);">Bay 1 & Bay 3 · 45 Personnel</div>
+              <b style="color:#fff;">Robotic Assembly & Cells</b>
+              <div style="font-size:11px;color:#94a3b8;">Bay 1 & Bay 3 · 45 Personnel</div>
             </div>
             <span class="roster-tag tag-safe" id="rosterTag1">100% SAFE</span>
           </div>
           <div class="roster-row">
             <div>
-              <b>Chemical Reagent Operations</b>
-              <div style="font-size:11px;color:var(--text-muted);">Bay 2 Silos · 35 Personnel</div>
+              <b style="color:#fff;">Chemical Reagent Operations</b>
+              <div style="font-size:11px;color:#94a3b8;">Bay 2 Silos · 35 Personnel</div>
             </div>
             <span class="roster-tag tag-safe" id="rosterTag2">100% SAFE</span>
           </div>
           <div class="roster-row">
             <div>
-              <b>Precision CNC Machining</b>
-              <div style="font-size:11px;color:var(--text-muted);">Bay 4 Machining · 50 Personnel</div>
+              <b style="color:#fff;">Precision CNC Machining</b>
+              <div style="font-size:11px;color:#94a3b8;">Bay 4 Machining · 50 Personnel</div>
             </div>
             <span class="roster-tag tag-safe" id="rosterTag3">100% SAFE</span>
           </div>
           <div class="roster-row">
             <div>
-              <b>Logistics & Dispatch Gate</b>
-              <div style="font-size:11px;color:var(--text-muted);">Bay 5 Cargo · 70 Personnel</div>
+              <b style="color:#fff;">Logistics & Dispatch Gate</b>
+              <div style="font-size:11px;color:#94a3b8;">Bay 5 Cargo · 70 Personnel</div>
             </div>
             <span class="roster-tag tag-safe" id="rosterTag4">100% SAFE</span>
           </div>
@@ -1862,7 +1920,7 @@
         <!-- Individual Coworker Status Reporting -->
         <div class="glass-card">
           <div class="eyebrow">COWORKER STATUS & RESCUE REQUESTS</div>
-          <h3 style="font-size:15px;margin-bottom:10px;">Individual Colleague Tracking</h3>
+          <h3 style="font-size:16px;margin-bottom:12px;color:#fff;">Individual Colleague Tracking</h3>
 
           <div id="personReportingList">
             <!-- Dynamically populated worker reporting cards -->
@@ -1876,7 +1934,7 @@
             <div class="feed-item critical">
               <div>
                 <b>🔥 Flash Solvent Flare-Up</b>
-                <div style="font-size:11px;color:var(--text-muted);">Bay 2 Silos · Reported by Albert (Station B4-02)</div>
+                <div style="font-size:11px;color:#cbd5e1;">Bay 2 Silos · Reported by Albert (Station B4-02)</div>
               </div>
               <span class="roster-tag tag-evac">DISPATCHED</span>
             </div>
@@ -1893,8 +1951,8 @@
           <div class="eyebrow">SCENARIO PARAMETERS</div>
           <div class="setting-row">
             <div>
-              <b>Incident Origin Zone</b>
-              <div style="font-size:11px;color:var(--text-muted);">Select simulated hazard trigger point</div>
+              <b style="color:#fff;">Incident Origin Zone</b>
+              <div style="font-size:11px;color:#94a3b8;">Select simulated hazard trigger point</div>
             </div>
             <select id="selectZone" class="cyber-select">
               <option value="2">Bay 2 · Chemical Silo Fire</option>
@@ -1905,8 +1963,8 @@
 
           <div class="setting-row">
             <div>
-              <b>Synthesizer SFX & Siren</b>
-              <div style="font-size:11px;color:var(--text-muted);">Procedural Web Audio alerts & footsteps</div>
+              <b style="color:#fff;">Synthesizer SFX & Siren</b>
+              <div style="font-size:11px;color:#94a3b8;">Procedural Web Audio alerts & footsteps</div>
             </div>
             <label class="switch-toggle">
               <input type="checkbox" id="chkAudio" checked onchange="toggleAudioCheckbox(this)">
@@ -1916,19 +1974,19 @@
 
           <div class="setting-row">
             <div>
-              <b>On-Screen Touch Bar / D-Pad</b>
-              <div style="font-size:11px;color:var(--text-muted);">Touch controls for mobile / tablet</div>
+              <b style="color:#fff;">On-Screen Touch Bar / D-Pad</b>
+              <div style="font-size:11px;color:#94a3b8;">Touch controls for mobile / tablet</div>
             </div>
             <label class="switch-toggle">
-              <input type="checkbox" id="chkTouchBar" checked onchange="toggleDpadVisibility(this.checked)">
+              <input type="checkbox" id="chkTouchBar" onchange="toggleDpadVisibility(this.checked)">
               <span class="switch-slider"></span>
             </label>
           </div>
 
           <div class="setting-row">
             <div>
-              <b>Haptic Vibration Feedback</b>
-              <div style="font-size:11px;color:var(--text-muted);">Tactile pulses on Android devices</div>
+              <b style="color:#fff;">Haptic Vibration Feedback</b>
+              <div style="font-size:11px;color:#94a3b8;">Tactile pulses on Android devices</div>
             </div>
             <label class="switch-toggle">
               <input type="checkbox" id="chkVibrate" checked>
@@ -1938,8 +1996,8 @@
 
           <div class="setting-row">
             <div>
-              <b>3D Camera Auto-Rotation</b>
-              <div style="font-size:11px;color:var(--text-muted);">Smooth digital twin orbit</div>
+              <b style="color:#fff;">3D Camera Auto-Rotation</b>
+              <div style="font-size:11px;color:#94a3b8;">Smooth digital twin orbit</div>
             </div>
             <label class="switch-toggle">
               <input type="checkbox" id="chkAutoRotate" checked onchange="toggleAutoRotate(this)">
@@ -1955,7 +2013,7 @@
 
         <div class="glass-card">
           <div class="eyebrow">DIGITAL TWIN SPECIFICATION</div>
-          <p style="font-size:12px;color:var(--text-muted);line-height:1.6;">
+          <p style="font-size:12px;color:#cbd5e1;line-height:1.6;">
             • <b>Platform Compatibility:</b> Android APK WebView + Laptop / Desktop Web Browsers<br>
             • <b>Navigation Controls:</b> Keyboard WASD / Arrows (Laptop) + Touch Bar D-Pad (Android)<br>
             • <b>Renderer:</b> WebGL 3D Hardware Accelerated (Three.js r128)<br>
@@ -1968,12 +2026,12 @@
     </div>
   </main>
 
-  <!-- Interactive 3D Object Diagnostic Modal -->
+  <!-- Interactive 3D Object Diagnostic Modal (Fixed & Hidden when not active) -->
   <div class="telemetry-modal" id="objectModal">
     <button class="modal-close" onclick="closeObjectModal()">✕</button>
     <div class="eyebrow" id="modalCategory">COMPONENT TELEMETRY</div>
     <h3 id="modalTitle" style="font-size:18px;margin-bottom:8px;color:#fff;">Robotic Cell R-01</h3>
-    <div style="font-size:12px;color:var(--text-muted);margin-bottom:12px;" id="modalDesc">
+    <div style="font-size:12px;color:#cbd5e1;margin-bottom:14px;" id="modalDesc">
       Automated six-axis welding robot. Current status: Operational.
     </div>
     <div class="telemetry-row">
@@ -1997,7 +2055,7 @@
     <div class="glass-card" style="max-width:400px;background:rgba(26,6,12,0.95);border-color:var(--red);">
       <div style="font-size:52px;margin-bottom:12px;">🆘</div>
       <h2 style="font-size:22px;color:#fff;margin-bottom:8px;">BROADCAST EMERGENCY SOS?</h2>
-      <p style="font-size:13px;color:var(--text-muted);margin-bottom:20px;">
+      <p style="font-size:13px;color:#cbd5e1;margin-bottom:20px;">
         Transmits your current position (<b>Bay 4 · Station 02</b>) with maximum priority distress signal across the factory IoT mesh network.
       </p>
       <button class="btn btn-emergency" onclick="confirmSOS()">TRANSMIT SOS SIGNAL NOW</button>
@@ -2128,7 +2186,6 @@
         osc.stop(now + 0.25);
       }
       else if (type === 'dispatch') {
-        // Radio dispatch chirp
         const osc = audioCtx.createOscillator();
         const gain = audioCtx.createGain();
         osc.type = 'square';
@@ -2226,6 +2283,7 @@
 
     /* ==========================================================================
        THREE.JS INDUSTRIAL DIGITAL TWIN 3D ENGINE
+       Vibrant, High-Contrast Factory Floor & Machinery
        ========================================================================== */
     let scene, camera, renderer, controls;
     let fireParticles, smokeParticles, pathMesh, alternatePathMesh;
@@ -2240,14 +2298,16 @@
     function init3D() {
       const container = $('canvasContainer');
       const width = container.clientWidth || window.innerWidth;
-      const height = container.clientHeight || 350;
+      const height = container.clientHeight || 380;
 
       scene = new THREE.Scene();
-      scene.background = new THREE.Color(0x040811);
-      scene.fog = new THREE.FogExp2(0x040811, 0.016);
+      // High-tech deep space navy slate
+      scene.background = new THREE.Color(0x0c1626);
+      // Gentle atmospheric fog that does NOT black out the factory!
+      scene.fog = new THREE.FogExp2(0x0c1626, 0.006);
 
       camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 1000);
-      camera.position.set(38, 30, 38);
+      camera.position.set(38, 32, 38);
 
       renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, powerPreference: "high-performance" });
       renderer.setSize(width, height);
@@ -2261,9 +2321,9 @@
       controls.dampingFactor = 0.05;
       controls.maxPolarAngle = Math.PI / 2.05;
       controls.minDistance = 8;
-      controls.maxDistance = 100;
+      controls.maxDistance = 110;
       controls.autoRotate = true;
-      controls.autoRotateSpeed = 0.7;
+      controls.autoRotateSpeed = 0.6;
       controls.target.set(0, 2, 0);
 
       raycaster = new THREE.Raycaster();
@@ -2276,7 +2336,6 @@
       buildFireAndSmokeSystem();
       buildArticulatedPersonnel();
 
-      // Keyboard & Touch D-Pad Input Listeners
       initKeyboardControls();
       initTouchDpadControls();
 
@@ -2287,17 +2346,29 @@
     }
 
     function buildLighting() {
-      const ambient = new THREE.AmbientLight(0x1d2e48, 0.9);
+      // 1. Crisp Daylight / High-Bay Ambient
+      const ambient = new THREE.AmbientLight(0x8fa3bf, 1.4);
       scene.add(ambient);
 
-      const dirLight = new THREE.DirectionalLight(0x8bc0ff, 1.2);
-      dirLight.position.set(30, 50, 25);
+      // 2. Hemispheric fill for rich contrast between floor and machines
+      const hemi = new THREE.HemisphereLight(0x60a5fa, 0x1e293b, 1.1);
+      scene.add(hemi);
+
+      // 3. Primary Directional Overhead Sunlight / High-Bay
+      const dirLight = new THREE.DirectionalLight(0xffffff, 1.8);
+      dirLight.position.set(28, 50, 25);
       dirLight.castShadow = true;
-      dirLight.shadow.mapSize.width = 1024;
-      dirLight.shadow.mapSize.height = 1024;
+      dirLight.shadow.mapSize.width = 2048;
+      dirLight.shadow.mapSize.height = 2048;
       scene.add(dirLight);
 
-      const beaconGeo = new THREE.CylinderGeometry(0.3, 0.3, 0.5, 12);
+      // 4. Cyan Rim Fill Light from opposite angle for high-tech specular edges
+      const rimLight = new THREE.DirectionalLight(0x00f0ff, 0.85);
+      rimLight.position.set(-30, 35, -25);
+      scene.add(rimLight);
+
+      // Emergency Beacon Strobe Lights (Pillars)
+      const beaconGeo = new THREE.CylinderGeometry(0.35, 0.35, 0.6, 12);
       const beaconMat = new THREE.MeshBasicMaterial({ color: 0x224466 });
 
       const pillarPositions = [
@@ -2307,7 +2378,7 @@
       ];
 
       pillarPositions.forEach(pos => {
-        const pLight = new THREE.PointLight(0xff2a55, 0, 18);
+        const pLight = new THREE.PointLight(0xff2a55, 0, 20);
         pLight.position.set(pos[0], 7.5, pos[2]);
         scene.add(pLight);
         beaconLights.push(pLight);
@@ -2319,23 +2390,40 @@
     }
 
     function buildFactoryEnvironment() {
+      // High-Contrast Metallic Modular Concrete Floor Slab
       const floorGeo = new THREE.PlaneGeometry(64, 64);
       const floorMat = new THREE.MeshStandardMaterial({
-        color: 0x08101e,
+        color: 0x16243a,
         roughness: 0.35,
-        metalness: 0.85
+        metalness: 0.45
       });
       const floor = new THREE.Mesh(floorGeo, floorMat);
       floor.rotation.x = -Math.PI / 2;
       floor.receiveShadow = true;
       scene.add(floor);
 
-      const grid = new THREE.GridHelper(64, 32, 0x00f0ff, 0x142842);
+      // Luminous Neon Grid Overlay
+      const grid = new THREE.GridHelper(64, 32, 0x00f0ff, 0x243e62);
       grid.position.y = 0.02;
       scene.add(grid);
 
-      const pillarGeo = new THREE.BoxGeometry(1.4, 8, 1.4);
-      const pillarMat = new THREE.MeshStandardMaterial({ color: 0x162235, roughness: 0.6 });
+      // Low Perimeter Safety Wall / Enclosure Rails
+      const wallMat = new THREE.MeshStandardMaterial({ color: 0x263a56, roughness: 0.4, metalness: 0.3 });
+      const borderWalls = [
+        { w: 64, h: 1.2, d: 0.5, x: 0, z: -32 },
+        { w: 64, h: 1.2, d: 0.5, x: 0, z: 32 },
+        { w: 0.5, h: 1.2, d: 64, x: -32, z: 0 },
+        { w: 0.5, h: 1.2, d: 64, x: 32, z: 0 }
+      ];
+      borderWalls.forEach(b => {
+        const wall = new THREE.Mesh(new THREE.BoxGeometry(b.w, b.h, b.d), wallMat);
+        wall.position.set(b.x, b.h / 2, b.z);
+        scene.add(wall);
+      });
+
+      // Concrete / Steel Support Pillars with Hazard Warning Bands
+      const pillarGeo = new THREE.BoxGeometry(1.6, 8, 1.6);
+      const pillarMat = new THREE.MeshStandardMaterial({ color: 0x24364e, roughness: 0.5 });
       const stripeMat = new THREE.MeshBasicMaterial({ color: 0xffb703 });
 
       const pillarCoords = [
@@ -2350,13 +2438,14 @@
         pillar.castShadow = true;
         scene.add(pillar);
 
-        const stripe = new THREE.Mesh(new THREE.BoxGeometry(1.45, 0.4, 1.45), stripeMat);
+        const stripe = new THREE.Mesh(new THREE.BoxGeometry(1.65, 0.5, 1.65), stripeMat);
         stripe.position.set(c[0], 1.2, c[2]);
         scene.add(stripe);
       });
 
-      const trussGeo = new THREE.BoxGeometry(64, 0.6, 0.6);
-      const gantryMat = new THREE.MeshStandardMaterial({ color: 0xffcc00, metalness: 0.5 });
+      // Overhead Steel Trusses & Gantry Cranes in Industrial Yellow
+      const trussGeo = new THREE.BoxGeometry(64, 0.7, 0.7);
+      const gantryMat = new THREE.MeshStandardMaterial({ color: 0xf59e0b, metalness: 0.3, roughness: 0.4 });
       const t1 = new THREE.Mesh(trussGeo, gantryMat);
       t1.position.set(0, 8.2, -6);
       scene.add(t1);
@@ -2365,9 +2454,11 @@
       t2.position.set(0, 8.2, 12);
       scene.add(t2);
 
+      // Exits with Glowing Portals
       buildExitPortal(-24, 0, -28, "EXIT A · NORTH", true);
       buildExitPortal(28, 0, 16, "EXIT B · SOUTH-EAST", false);
 
+      // Floor Zone Boundaries
       createFloorZoneMarking(-16, -14, 12, 12, "BAY 01 · ROBOTICS", 0x00f0ff);
       createFloorZoneMarking(-16, 6, 12, 12, "BAY 02 · SOLVENTS", 0xffb703);
       createFloorZoneMarking(14, -14, 12, 12, "BAY 03 · CNC MILL", 0x00f0ff);
@@ -2390,27 +2481,28 @@
     function buildExitPortal(x, y, z, label, isNorth) {
       const exitGroup = new THREE.Group();
 
-      const frameGeo = new THREE.BoxGeometry(4.5, 4.5, 1);
-      const frameMat = new THREE.MeshStandardMaterial({ color: 0x1b2838 });
+      const frameGeo = new THREE.BoxGeometry(4.8, 4.8, 1);
+      const frameMat = new THREE.MeshStandardMaterial({ color: 0x1e3048, metalness: 0.5 });
       const frame = new THREE.Mesh(frameGeo, frameMat);
-      frame.position.set(0, 2.25, 0);
+      frame.position.set(0, 2.4, 0);
       exitGroup.add(frame);
 
-      const signGeo = new THREE.BoxGeometry(3.5, 0.8, 1.2);
+      // Glowing Exit Signboard
+      const signGeo = new THREE.BoxGeometry(3.6, 0.9, 1.2);
       const signMat = new THREE.MeshBasicMaterial({ color: 0x00ff9d });
       const sign = new THREE.Mesh(signGeo, signMat);
-      sign.position.set(0, 4.8, 0);
+      sign.position.set(0, 5.1, 0);
       exitGroup.add(sign);
 
-      const threshGeo = new THREE.PlaneGeometry(4, 2);
-      const threshMat = new THREE.MeshBasicMaterial({ color: 0x00ff9d, transparent: true, opacity: 0.45 });
+      const threshGeo = new THREE.PlaneGeometry(4.2, 2.4);
+      const threshMat = new THREE.MeshBasicMaterial({ color: 0x00ff9d, transparent: true, opacity: 0.5 });
       const thresh = new THREE.Mesh(threshGeo, threshMat);
       thresh.rotation.x = -Math.PI / 2;
       thresh.position.set(0, 0.04, 1.2);
       exitGroup.add(thresh);
 
-      const exitLight = new THREE.PointLight(0x00ff9d, 1.5, 12);
-      exitLight.position.set(0, 3, 1);
+      const exitLight = new THREE.PointLight(0x00ff9d, 2.0, 14);
+      exitLight.position.set(0, 3.5, 1);
       exitGroup.add(exitLight);
 
       exitGroup.position.set(x, y, z);
@@ -2435,30 +2527,39 @@
     function createRoboticArm(x, z, zPos, name) {
       const armGroup = new THREE.Group();
 
-      const baseGeo = new THREE.CylinderGeometry(1.6, 1.8, 0.8, 16);
-      const baseMat = new THREE.MeshStandardMaterial({ color: 0x22354c, metalness: 0.7 });
+      // Pedestal Base
+      const baseGeo = new THREE.CylinderGeometry(1.6, 1.9, 0.8, 16);
+      const baseMat = new THREE.MeshStandardMaterial({ color: 0x334155, metalness: 0.8 });
       const base = new THREE.Mesh(baseGeo, baseMat);
       base.position.y = 0.4;
       armGroup.add(base);
 
-      const arm1Geo = new THREE.BoxGeometry(0.6, 2.8, 0.6);
-      const armMat = new THREE.MeshStandardMaterial({ color: 0xffaa00, metalness: 0.5, roughness: 0.4 });
+      // Arm Segment 1 in Vibrant Industrial Yellow
+      const arm1Geo = new THREE.BoxGeometry(0.65, 2.9, 0.65);
+      const armMat = new THREE.MeshStandardMaterial({ color: 0xfbbf24, metalness: 0.4, roughness: 0.3 });
       const arm1 = new THREE.Mesh(arm1Geo, armMat);
       arm1.position.set(0, 2.2, 0);
       arm1.rotation.z = 0.25;
       armGroup.add(arm1);
 
-      const arm2Geo = new THREE.BoxGeometry(0.5, 2.4, 0.5);
+      // Arm Segment 2 (Articulated)
+      const arm2Geo = new THREE.BoxGeometry(0.55, 2.5, 0.55);
       const arm2 = new THREE.Mesh(arm2Geo, armMat);
       arm2.position.set(-0.6, 3.8, 0);
       arm2.rotation.z = -0.5;
       armGroup.add(arm2);
 
-      const tipGeo = new THREE.SphereGeometry(0.25, 8, 8);
+      // Welder / Tool Head with Glowing Tip
+      const tipGeo = new THREE.SphereGeometry(0.3, 12, 12);
       const tipMat = new THREE.MeshBasicMaterial({ color: 0x00f0ff });
       const tip = new THREE.Mesh(tipGeo, tipMat);
-      tip.position.set(-0.2, 4.9, 0);
+      tip.position.set(-0.2, 5.0, 0);
       armGroup.add(tip);
+
+      // Local spotlight for the welding arm
+      const armLight = new THREE.PointLight(0x00f0ff, 1.2, 6);
+      armLight.position.set(-0.2, 5.0, 0);
+      armGroup.add(armLight);
 
       armGroup.position.set(x, 0, zPos);
       scene.add(armGroup);
@@ -2476,27 +2577,31 @@
     function createChemicalSilo(x, z, zPos, name) {
       const siloGroup = new THREE.Group();
 
-      const cylGeo = new THREE.CylinderGeometry(2, 2, 6, 20);
-      const cylMat = new THREE.MeshStandardMaterial({ color: 0x3d5a80, metalness: 0.6, roughness: 0.3 });
+      // Silo Cylinder in Polished Metallic Silver-Cyan
+      const cylGeo = new THREE.CylinderGeometry(2.1, 2.1, 6.2, 24);
+      const cylMat = new THREE.MeshStandardMaterial({ color: 0x64748b, metalness: 0.8, roughness: 0.2 });
       const cyl = new THREE.Mesh(cylGeo, cylMat);
-      cyl.position.y = 3;
+      cyl.position.y = 3.1;
       siloGroup.add(cyl);
 
-      const domeGeo = new THREE.SphereGeometry(2, 20, 10, 0, Math.PI * 2, 0, Math.PI / 2);
+      // Dome Top
+      const domeGeo = new THREE.SphereGeometry(2.1, 24, 12, 0, Math.PI * 2, 0, Math.PI / 2);
       const dome = new THREE.Mesh(domeGeo, cylMat);
-      dome.position.y = 6;
+      dome.position.y = 6.2;
       siloGroup.add(dome);
 
-      const glassGeo = new THREE.CylinderGeometry(0.2, 0.2, 4.5, 8);
+      // Liquid Sight Glass Tube (Luminous Emerald)
+      const glassGeo = new THREE.CylinderGeometry(0.22, 0.22, 4.6, 12);
       const glassMat = new THREE.MeshBasicMaterial({ color: 0x00ff9d });
       const glass = new THREE.Mesh(glassGeo, glassMat);
-      glass.position.set(2.05, 3, 0);
+      glass.position.set(2.15, 3.1, 0);
       siloGroup.add(glass);
 
-      const diamondGeo = new THREE.BoxGeometry(0.8, 0.8, 0.1);
+      // Hazard Warning Diamond
+      const diamondGeo = new THREE.BoxGeometry(0.85, 0.85, 0.1);
       const diamondMat = new THREE.MeshBasicMaterial({ color: 0xff2a55 });
       const diamond = new THREE.Mesh(diamondGeo, diamondMat);
-      diamond.position.set(0, 3.5, 2.05);
+      diamond.position.set(0, 3.5, 2.15);
       diamond.rotation.z = Math.PI / 4;
       siloGroup.add(diamond);
 
@@ -2515,16 +2620,17 @@
     function createCNCStation(x, z, zPos, name) {
       const cncGroup = new THREE.Group();
 
-      const bodyGeo = new THREE.BoxGeometry(3.5, 3.5, 3);
-      const bodyMat = new THREE.MeshStandardMaterial({ color: 0x1d2c3f, metalness: 0.5 });
+      const bodyGeo = new THREE.BoxGeometry(3.6, 3.6, 3.2);
+      const bodyMat = new THREE.MeshStandardMaterial({ color: 0x1e293b, metalness: 0.7, roughness: 0.3 });
       const body = new THREE.Mesh(bodyGeo, bodyMat);
-      body.position.y = 1.75;
+      body.position.y = 1.8;
       cncGroup.add(body);
 
-      const winGeo = new THREE.PlaneGeometry(2, 1.6);
-      const winMat = new THREE.MeshBasicMaterial({ color: 0x00f0ff, transparent: true, opacity: 0.6 });
+      // Illuminated Safety Glass Window
+      const winGeo = new THREE.PlaneGeometry(2.2, 1.8);
+      const winMat = new THREE.MeshBasicMaterial({ color: 0x38bdf8, transparent: true, opacity: 0.7 });
       const win = new THREE.Mesh(winGeo, winMat);
-      win.position.set(0, 2.2, 1.51);
+      win.position.set(0, 2.2, 1.61);
       cncGroup.add(win);
 
       cncGroup.position.set(x, 0, zPos);
@@ -2542,16 +2648,17 @@
     function createServerRack(x, z, zPos, name) {
       const rackGroup = new THREE.Group();
 
-      const geo = new THREE.BoxGeometry(2, 4.5, 1.6);
+      const geo = new THREE.BoxGeometry(2.2, 4.6, 1.8);
       const mat = new THREE.MeshStandardMaterial({ color: 0x111b27, roughness: 0.4 });
       const rack = new THREE.Mesh(geo, mat);
-      rack.position.y = 2.25;
+      rack.position.y = 2.3;
       rackGroup.add(rack);
 
-      const diodeGeo = new THREE.PlaneGeometry(1.4, 3.6);
+      // Blinking Diode Strip
+      const diodeGeo = new THREE.PlaneGeometry(1.6, 3.8);
       const diodeMat = new THREE.MeshBasicMaterial({ color: 0x00f0ff });
       const diode = new THREE.Mesh(diodeGeo, diodeMat);
-      diode.position.set(0, 2.25, 0.81);
+      diode.position.set(0, 2.3, 0.91);
       rackGroup.add(diode);
 
       rackGroup.position.set(x, 0, zPos);
@@ -2571,31 +2678,30 @@
 
     function buildEvacuationPaths() {
       const normalPoints = [
-        new THREE.Vector3(14, 0.1, 8),
-        new THREE.Vector3(2, 0.1, 8),
-        new THREE.Vector3(2, 0.1, -12),
-        new THREE.Vector3(-14, 0.1, -12),
-        new THREE.Vector3(-24, 0.1, -26)
+        new THREE.Vector3(14, 0.12, 8),
+        new THREE.Vector3(2, 0.12, 8),
+        new THREE.Vector3(2, 0.12, -12),
+        new THREE.Vector3(-14, 0.12, -12),
+        new THREE.Vector3(-24, 0.12, -26)
       ];
       normalPathCurve = new THREE.CatmullRomCurve3(normalPoints);
-      const normalGeo = new THREE.TubeGeometry(normalPathCurve, 64, 0.28, 8, false);
+      const normalGeo = new THREE.TubeGeometry(normalPathCurve, 64, 0.32, 8, false);
       const normalMat = new THREE.MeshBasicMaterial({
         color: 0x00ff9d,
-        wireframe: false,
         transparent: true,
-        opacity: 0.85
+        opacity: 0.92
       });
       pathMesh = new THREE.Mesh(normalGeo, normalMat);
       scene.add(pathMesh);
 
       const altPoints = [
-        new THREE.Vector3(14, 0.1, 8),
-        new THREE.Vector3(24, 0.1, 8),
-        new THREE.Vector3(26, 0.1, 14),
-        new THREE.Vector3(28, 0.1, 16)
+        new THREE.Vector3(14, 0.12, 8),
+        new THREE.Vector3(24, 0.12, 8),
+        new THREE.Vector3(26, 0.12, 14),
+        new THREE.Vector3(28, 0.12, 16)
       ];
       altPathCurve = new THREE.CatmullRomCurve3(altPoints);
-      const altGeo = new THREE.TubeGeometry(altPathCurve, 48, 0.35, 8, false);
+      const altGeo = new THREE.TubeGeometry(altPathCurve, 48, 0.38, 8, false);
       const altMat = new THREE.MeshBasicMaterial({
         color: 0x00f0ff,
         transparent: true,
@@ -2770,7 +2876,7 @@
           color: 0xffca36,
           side: THREE.DoubleSide,
           transparent: true,
-          opacity: 0.8
+          opacity: 0.85
         });
         const radarRing = new THREE.Mesh(radarGeo, radarMat);
         radarRing.rotation.x = -Math.PI / 2;
@@ -2778,7 +2884,7 @@
         group.add(radarRing);
 
         const beamGeo = new THREE.CylinderGeometry(0.04, 0.04, 8, 8);
-        const beamMat = new THREE.MeshBasicMaterial({ color: 0xffca36, transparent: true, opacity: 0.65 });
+        const beamMat = new THREE.MeshBasicMaterial({ color: 0xffca36, transparent: true, opacity: 0.75 });
         const beam = new THREE.Mesh(beamGeo, beamMat);
         beam.position.y = 4;
         group.add(beam);
@@ -3001,7 +3107,6 @@
         if (key === 'KeyD' || key === 'ArrowRight') { keysPressed.d = true; $('keyD').classList.add('pressed'); }
         if (key === 'ShiftLeft' || key === 'ShiftRight') { keysPressed.shift = true; $('keyShift').classList.add('pressed'); }
 
-        // When user moves manually, disable automated path walk
         if (['KeyW', 'KeyS', 'KeyA', 'KeyD', 'ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(key)) {
           if (isRealTimeWalking) {
             isRealTimeWalking = false;
@@ -3068,7 +3173,7 @@
       if (forceState !== undefined) {
         panel.style.display = forceState ? 'flex' : 'none';
       } else {
-        const isHidden = panel.style.display === 'none';
+        const isHidden = window.getComputedStyle(panel).display === 'none';
         panel.style.display = isHidden ? 'flex' : 'none';
       }
     }
@@ -3087,11 +3192,10 @@
 
       const isShift = keysPressed.shift || touchRunActive || isEmergency;
       const moveSpeed = (isShift ? userAvatar.runSpeed : userAvatar.speed);
-      const turnSpeed = 2.4 * delta;
+      const turnSpeed = 2.5 * delta;
 
       let moved = false;
 
-      // Turning Left / Right
       if (keysPressed.a) {
         userAvatar.group.rotation.y += turnSpeed;
       }
@@ -3099,7 +3203,6 @@
         userAvatar.group.rotation.y -= turnSpeed;
       }
 
-      // Moving Forward / Backward
       const curFacing = userAvatar.group.rotation.y;
       const forwardDir = new THREE.Vector3(Math.sin(curFacing), 0, Math.cos(curFacing));
 
@@ -3112,7 +3215,6 @@
         moved = true;
       }
 
-      // Clamp player within factory walls [-28, 28]
       userAvatar.group.position.x = Math.max(-28, Math.min(28, userAvatar.group.position.x));
       userAvatar.group.position.z = Math.max(-28, Math.min(28, userAvatar.group.position.z));
 
@@ -3120,14 +3222,12 @@
         userAvatar.isMoving = true;
         userAvatar.isRunning = isShift;
 
-        // Footstep audio
         const now = Date.now();
         if (now - lastFootstepTime > (isShift ? 250 : 380)) {
           playSound('footstep');
           lastFootstepTime = now;
         }
 
-        // Camera follow
         if (followCamEnabled) {
           const camOffset = new THREE.Vector3(-forwardDir.x * 9, 7, -forwardDir.z * 9);
           camera.position.lerp(new THREE.Vector3().copy(userAvatar.group.position).add(camOffset), 0.08);
@@ -3143,14 +3243,12 @@
     function updateHumans(delta) {
       const now = Date.now();
 
-      // Manual player movement check
       handleManualMovement(delta);
 
       humanAgents.forEach(agent => {
         if (agent.evacuated) return;
 
         if (agent.isUser) {
-          // Automated Path Walking if toggled
           if (isRealTimeWalking && walkPathCurve) {
             agent.isMoving = true;
             agent.isRunning = isEmergency;
@@ -3197,7 +3295,6 @@
           }
         }
         else {
-          // Autonomous Colleague Workers
           if (isEmergency && !agent.evacuated) {
             agent.isMoving = true;
             agent.isRunning = true;
@@ -3233,7 +3330,6 @@
           }
         }
 
-        // Animate articulated limbs based on movement state
         if (agent.isMoving) {
           agent.walkCycle += (agent.isRunning ? 18 : 10) * delta;
           const legSwing = Math.sin(agent.walkCycle) * (agent.isRunning ? 0.75 : 0.42);
@@ -3267,7 +3363,6 @@
         }
       });
 
-      // Animate 3D Field Incident Markers
       fieldIncidentMarkers.forEach(m => {
         m.rotation.y += 0.04;
         m.position.y = 1.8 + Math.sin(now * 0.008) * 0.2;
@@ -3398,7 +3493,7 @@
 
       if (preset === 'iso') {
         $('btnCamIso').classList.add('active');
-        smoothCameraMove(38, 30, 38, 0, 2, 0);
+        smoothCameraMove(38, 32, 38, 0, 2, 0);
       } else if (preset === 'top') {
         $('btnCamTop').classList.add('active');
         smoothCameraMove(0, 55, 0.1, 0, 0, 0);
@@ -3545,26 +3640,22 @@
 
       playSound('dispatch');
 
-      // Create glowing 3D beacon on floor
       create3DIncidentBeacon(zone);
 
-      // Add to live reports feed
       const time = new Date().toLocaleTimeString();
       const div = document.createElement('div');
       div.className = 'feed-item ' + (urgency === 'CRITICAL' ? 'critical' : '');
       div.innerHTML = `
         <div>
           <b>${selectedIncidentType}</b>
-          <div style="font-size:11px;color:var(--text-muted);">${zone} · Reported by You (${notes.substring(0, 35)}...)</div>
+          <div style="font-size:11px;color:#cbd5e1;">${zone} · Reported by You (${notes.substring(0, 35)}...)</div>
         </div>
         <span class="roster-tag ${urgency === 'CRITICAL' ? 'tag-evac' : 'tag-safe'}">DISPATCHED</span>
       `;
       $('incidentReportsFeed').insertBefore(div, $('incidentReportsFeed').firstChild);
 
-      // Log in central telemetry
       logEvent(`FIELD REPORT: ${selectedIncidentType} at ${zone} [${urgency}]`, urgency === 'CRITICAL' ? 'critical' : 'normal');
 
-      // If critical, increment active hazards
       if (urgency === 'CRITICAL' && !isEmergency) {
         triggerEmergency();
       }
@@ -3603,8 +3694,8 @@
       container.innerHTML = humanAgents.filter(a => !a.isUser).map(a => `
         <div class="person-card">
           <div>
-            <b>${a.name}</b>
-            <div style="font-size:11px;color:var(--text-muted);">${a.role} · ${a.bay}</div>
+            <b style="color:#fff;">${a.name}</b>
+            <div style="font-size:11px;color:#94a3b8;">${a.role} · ${a.bay}</div>
           </div>
           <div class="person-actions">
             <button class="mini-btn btn-flag-safe" onclick="setPersonStatus('${a.id}', 'SAFE')">Safe</button>
@@ -3635,7 +3726,6 @@
         logEvent(`✓ SAFETY CONFIRMED: ${agent.name} marked SAFE at muster.`, 'success');
       }
 
-      // Recalculate people
       let safeCount = humanAgents.filter(a => a.status === 'SAFE').length;
       let injuredCount = humanAgents.filter(a => a.status === 'INJURED').length;
       let missingCount = humanAgents.filter(a => a.status === 'MISSING').length;
@@ -3763,7 +3853,7 @@
       fieldIncidentMarkers = [];
 
       pathMesh.material.color.setHex(0x00ff9d);
-      pathMesh.material.opacity = 0.85;
+      pathMesh.material.opacity = 0.92;
       pathMesh.material.wireframe = false;
 
       alternatePathMesh.material.color.setHex(0x00f0ff);
@@ -3841,7 +3931,7 @@
           <div style="font-size:32px;">🛡️</div>
           <div>
             <div style="font-size:16px;font-weight:800;color:var(--emerald);">Normal Industrial Operations</div>
-            <div style="font-size:12px;color:var(--text-muted);">All 5 production zones operating within certified safety parameters.</div>
+            <div style="font-size:12px;color:#cbd5e1;">All 5 production zones operating within certified safety parameters.</div>
           </div>
         </div>
       `;
