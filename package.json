@@ -1,0 +1,15 @@
+{
+  "name": "safefactory-3d",
+  "version": "1.0.0",
+  "description": "SafeFactory 3D — Industrial Digital Twin & Real-Time Emergency Navigation Web App",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && node scripts/sync-android.js",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^6.2.0"
+  }
+}

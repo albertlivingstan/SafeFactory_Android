@@ -2,7 +2,38 @@
 
 SafeFactory 3D is a responsive, hardware-accelerated 3D Web Application and Android App designed for industrial emergency management, real-time digital twin monitoring, and workforce evacuation accountability.
 
-Works offline and online across **Laptops / Desktops** (wide-screen responsive layout with WASD controls) and **Android Phones / Tablets** (mobile layout with virtual Touch Bar D-Pad).
+Built with **Vite** for zero-latency local development and instant deployment to **Vercel**, while maintaining full offline Android APK support.
+
+---
+
+## 🚀 Instant Deployment on Vercel
+
+1. Go to [vercel.com](https://vercel.com) and click **"Add New Project"**.
+2. Import your GitHub repository: [`albertlivingstan/SafeFactory_Android`](https://github.com/albertlivingstan/SafeFactory_Android).
+3. Vercel automatically detects the **Vite** framework preset:
+   - **Build Command:** `npm run build`
+   - **Output Directory:** `dist`
+4. Click **Deploy**! Your 3D Web App will be live with free global CDN and SSL.
+
+---
+
+## 💻 Local Development with Vite
+
+1. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+2. **Start the local Vite dev server:**
+   ```bash
+   npm run dev
+   ```
+   Open **[http://localhost:8080](http://localhost:8080)** with instant Hot Module Replacement (HMR).
+
+3. **Build for production:**
+   ```bash
+   npm run build
+   ```
+   Outputs the optimized static bundle to `dist/` and automatically synchronizes with the Android assets.
 
 ---
 
@@ -39,16 +70,6 @@ Works offline and online across **Laptops / Desktops** (wide-screen responsive l
 ### 4. 🔊 Procedural Synthesizer & Tactile Haptics
 - **Procedural Web Audio API:** Modulated evacuation sirens, footstep audio synchronization, emergency dispatch radio chirps, and realistic heartbeat monitor (`lub-dub`) — 100% offline with zero external audio assets.
 - **Haptic Vibration:** Tactile vibration sequences for critical alerts and check-in confirmation.
-
----
-
-## 💻 Running the Web App on Laptop
-
-Run a local server:
-```bash
-python3 -m http.server 8080 --directory app/src/main/assets
-```
-Open **[http://localhost:8080](http://localhost:8080)** in Chrome, Safari, or Edge.
 
 ---
 

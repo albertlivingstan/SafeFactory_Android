@@ -1,3 +1,7 @@
+# Node & Vite
+node_modules/
+dist/
+
 # Android & Gradle
 .gradle/
 build/
@@ -10,4 +14,3 @@ local.properties
 .DS_Store
 Thumbs.db
 *.log
-
